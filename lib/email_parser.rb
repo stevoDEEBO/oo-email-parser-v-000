@@ -1,14 +1,14 @@
 
 class EmailParser
-  #attr_accessor :email
+  attr_accessor :emails
   @@list = []
 
   def initialize(emails)
-    @@list = emails.split(/\, |\ /)
+    @@emails = emails
   end
 
   def parse
-    clean_list = @@list.uniq
-    clean_list
+    @@list = @@emails.split(/\, |\ /).uniq
+    @@list
   end
 end
