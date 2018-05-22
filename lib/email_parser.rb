@@ -1,10 +1,10 @@
 
 class EmailParser
-  attr_accessor :email
+  #attr_accessor :email
   @@list = []
 
-  def initialize(email_list)
-    @@list = email_list.split(/\, |\ /)
+  def initialize(emails)
+    @@list = emails.split(/\, |\ /)
   end
 
   def parse
