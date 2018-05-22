@@ -4,11 +4,11 @@ class EmailParser
   @@list = []
 
   def initialize(emails)
-    @@emails = emails
+    @emails = emails
   end
 
   def parse
-    @@list = @@emails.split(/\, |\ /).uniq
-    @@list
+    @emails.split(/\, |\ /).uniq
+    @emails
   end
 end
